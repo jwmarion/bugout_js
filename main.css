@@ -1,0 +1,30 @@
+
+
+*{
+  box-sizing: border-box;
+}
+.main{
+  width: 40vw;
+  position: relative;
+  margin: 0 auto;
+}
+.gameboard{
+  width: 100;
+  position: relative;
+  margin: 0 auto;
+}
+.title{
+  text-align: center;
+}
+.gameboard div{
+  height: 7vw;
+  width: 7vw;
+  background-color: lightblue;
+  border: 2px solid black;
+  float: left;
+
+}
+
+.gameboard div:nth-child(5n +6){
+  clear: both;
+}
