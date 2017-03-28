@@ -29,8 +29,8 @@
 .animated.flipOutY,
 .animated.bounceIn,
 .animated.bounceOut {
-  -webkit-animation-duration: .75s;
-  animation-duration: .75s;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
 }
 
 @-webkit-keyframes bounce {
@@ -1840,6 +1840,7 @@
   backface-visibility: visible;
   -webkit-animation-name: flip;
   animation-name: flip;
+    animation-duration: .5s;
 }
 
 @-webkit-keyframes flipInX {
@@ -1849,6 +1850,7 @@
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
     opacity: 0;
+      animation-duration: .25s;
   }
 
   40% {
