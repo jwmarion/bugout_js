@@ -76,13 +76,15 @@ Board.prototype.checkWin = function(){
   });
   if (w == 0){
     console.log('win');
-    this.level = this.level  +1;
+    this.level = this.level+1;
     this.setLevel();
   }
 }
 
 Board.prototype.setLevel= function(){
-  console.log(this.level);
+  for (var i = 0; i<=25; i++){
+    this.grid[i] = -1;
+  }
   if (this.level == 1){
     this.grid[11] = 1;
     this.grid[13] = 1;
@@ -172,6 +174,19 @@ $('.gameboard').on('click','div',function(){
   board.click(list.index(this));
   board.draw();
   board.checkWin();
+})
+
+$('.buttons').on('click','span:nth-of-type(1)',function(e){
+  board.setLevel();
+  board.draw();
+})
+$('.buttons').on('click','span:nth-of-type(2)',function(e){
+  board.level = 6;
+  board.setLevel();
+  board.draw();
+})
+$('.buttons').on('click','span:nth-of-type(3)',function(e){
+  window.open('http://jamesmarion.net');
 })
 
 
