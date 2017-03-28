@@ -20,20 +20,51 @@ Board.prototype.draw = function(){
 };
 
 Board.prototype.click = function(num){
-  this.grid[num +1] = this.grid[num +1] * -1;
+  // this.grid[num +1] = this.grid[num +1] * -1;
+  $('.gameboard div:nth-of-type('+(num+1)+')').addClass('animated flipOutY')
+  window.setTimeout(function(e){
+    $('.gameboard div:nth-of-type('+(num+1)+')').removeClass('animated flipOutY')
+    $('.gameboard div:nth-of-type('+(num+1)+')').addClass('animated flipInY')
+  },100)
+
+    this.grid[num +1] = this.grid[num +1] * -1;
+    // $('.gameboard div:nth-of-type('+num+1+')').addClass('animated flipOutY')
   console.log(num);
   if ((num +1)  % 5 != 0){
     this.grid[num+2] = this.grid[num+2] * -1;
+    $('.gameboard div:nth-of-type('+(num+2)+')').addClass('animated flipOutY')
+    window.setTimeout(function(e){
+      $('.gameboard div:nth-of-type('+(num+2)+')').removeClass('animated flipOutY')
+      $('.gameboard div:nth-of-type('+(num+2)+')').addClass('animated flipInY')
+    },100)
   }
   if (num+1 > 4){
     this.grid[num-4] = this.grid[num-4] * -1;
+    $('.gameboard div:nth-of-type('+(num-4)+')').addClass('animated flipOutY')
+    window.setTimeout(function(e){
+      $('.gameboard div:nth-of-type('+(num-4)+')').removeClass('animated flipOutY')
+      $('.gameboard div:nth-of-type('+(num-4)+')').addClass('animated flipInY')
+    },100)
   }
   if ((num % 5) != 0){
     this.grid[num] = this.grid[num] * -1;
+    $('.gameboard div:nth-of-type('+(num)+')').addClass('animated flipOutY')
+    window.setTimeout(function(e){
+      $('.gameboard div:nth-of-type('+(num)+')').removeClass('animated flipOutY')
+      $('.gameboard div:nth-of-type('+(num)+')').addClass('animated flipInY')
+    },100)
   }
   if (num+1 <= 20){
     this.grid[num+6] = this.grid[num+6] * -1;
+    $('.gameboard div:nth-of-type('+(num+6)+')').addClass('animated flipOutY')
+    window.setTimeout(function(e){
+      $('.gameboard div:nth-of-type('+(num+6)+')').removeClass('animated flipOutY')
+      $('.gameboard div:nth-of-type('+(num+6)+')').addClass('animated flipInY')
+    },100)
   }
+  $('.gameboard div').removeClass('animated flipInY');
+
+
 };
 
 Board.prototype.checkWin = function(){
