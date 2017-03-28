@@ -82,7 +82,7 @@ Board.prototype.checkWin = function(){
 }
 
 Board.prototype.setLevel= function(){
-  for (var i = 0; i<=25; i++){
+  for (var i = 1; i<=25; i++){
     this.grid[i] = -1;
   }
   if (this.level == 1){
