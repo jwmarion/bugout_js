@@ -1,4 +1,4 @@
-# Project Title
+# Lights Out
 
 This was a project I created that has similar functionality to the hand-held Tiger Electronics game "Lights Out", that saw some success in the mid 90s. I did this project to get more comfortable with CSS and Jquery selectors. The game board is 25 blank, classes divs which are manipulated to play the game.
 
