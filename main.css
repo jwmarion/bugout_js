@@ -58,6 +58,6 @@ position: relative;
   float: left;
 }
 
-.gameboard div:nth-child(5n +6){
+.gameboard div:nth-child(5n+6){
   clear: both;
 }
